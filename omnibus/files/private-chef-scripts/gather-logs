@@ -357,6 +357,9 @@ then
 
 fi
 
+history_file="$tmpdir/history.txt"
+history >> "$history_file"
+
 tar -C "${tmpdir%/*/*}" -cjpf "$hostname-$timestamp.tbz2" "$hostname/$timestamp/"
 
 rm -rf "${tmpdir%/*/*}"
